@@ -1,0 +1,113 @@
+.moi_container {
+    margin-top: 40px;
+}
+
+.moi_desc1 {
+    text-align: center;
+    font-size: 36px;
+}
+
+.moi_desc2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.moi_img {
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.moi_img > img {
+}
+
+.img_big {
+    height: auto;
+    width: 36%;
+    border-radius: 18px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.img_small {
+    height: auto;
+    width: 28%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    opacity: 1;
+    border-radius: 14px;
+    z-index: 1;
+
+}
+
+
+.cf_container {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    border-radius: 16px;
+    
+    margin-bottom: 150px;
+}
+
+.cf_container > div {
+    margin: 6px 0;
+}
+
+.cf_desc1 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    
+}
+
+.cf_desc2 {
+    text-transform: uppercase;
+    font-size: 16px;
+    
+}
+
+.cf_desc3 {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+.cf_desc4 {
+    color: #333;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.cf_btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    width: 60%;
+    margin: 5px 0;
+    cursor: pointer;
+    box-shadow: 0 5px 6px 2px rgba(120, 120, 120, 0.4);
+    background-color: #f1f1f1;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.cf_btn:hover {
+    background-color: #eee;
+    box-shadow: 0 5px 6px 0 rgba(120, 120, 120, 0.4);
+    font-size: 13.8px;
+}
+
+.cf_btn > a {
+    text-decoration: none;
+    color: black;
+}
+
+.cf_btn2 {
+
+}

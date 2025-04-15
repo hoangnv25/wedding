@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Ngọc Lan & </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./style_album.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="stylesheet" href="./grid.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Newsreader:opsz,wght@6..72,500&family=Noto+Serif+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- thiệp -->
+    <div class="thiep">
+        <div class="thiep_blur-bg">
+            <div class="thiep_container">
+                <!-- Phần 0 -->
+                <div class="thiep_des">
+                    <p class="font_fancy">Save The Date</p>
+                </div>
+                <!-- Phần 1 -->
+                <div class="thiep_name">
+                    <p class="font_thanh_dam">Nguyễn Tiến</p>
+                    <p class="font_thanh_dam thiep_small">&</p>
+                    <p class="font_thanh_dam">Ngọc Lan</p>
+                </div>
+                <!-- Phần 2 -->
+                <div class="thiep_date_box font_thanh_dam">
+                    <hr class="hr-wrapper">
+                    <div class="thiep_space"></div>
+                    <div class="thiep_date_row">
+                      <div class="thiep_item">
+                        <hr>
+                        <span class="padding_day">THỨ BA</span>
+                        <hr>
+                      </div>
+                      <div class="thiep_main_date">29</div>
+                      <div class="thiep_item">
+                        <hr>
+                        <span class="padding_hour">11H00</span>
+                        <hr>
+                      </div>
+                    </div>
+                    <div class="thiep_month_year">04.2025</div>
+                  </div>
+                  
+                <!-- Phần 3 -->
+                <div class="thiep_add">
+                    <p class="font_fancy add_fancy">Địa điểm tổ chức</p>
+                    <p class="font_thanh_dam add_big">GIA ĐÌNH NHÀ TRAI</p>
+                    <p class="font_thanh_dam add_small">Xóm 12 - Xã Quỳnh Vinh</p>
+                    <p class="font_thanh_dam add_small">Thị xã Hoàng Mai - Tỉnh Nghệ An </p>
+                    <hr class="hr-add">
+                </div>
+
+                <!-- phần icon -->
+                 <div class="thiep_all_icon">
+                    <a class="thiep_map" href="#">
+                        <img src="./source/pin_map.svg" alt="">
+                    </a>
+                 </div>
+                    
+                
+            </div>
+
+        </div>
+    
+    </div>
+    
+    <div class="gt_container">
+        <div class="gt_des"> Giới thiệu </div>
+        <div class="gt_des2"> Chú Rể và Cô Dâu </div>
+        <div class="gt_img">
+            <img src="./source/re.jpg" alt="">
+            <p class="caption">Nguyễn Tiến</p>
+        </div>
+        <div class="gt_img">
+            <img src="./source/dau.jpg" alt="">
+            <p class="caption">Ngọc Lan</p>
+        </div>
+
+    </div>
+
+
+    <!-- Mời -->
+    <div class="moi_container">
+        <div class="moi_desc1 font_fancy">Thư mời</div>
+        <div class="moi_desc2 font_thanh_dam">Tham dự Lễ cưới của Nguyễn Tiến & Ngọc Lan</div>
+        <div class="moi_img">
+            <img class="img_small" src="./source/anh2.jpg" alt="">
+            <img class="img_big" src="./source/anh2.jpg" alt="">
+            <img class="img_small" src="./source/anh2.jpg" alt="">            
+        </div>
+    </div>
+
+    <!-- confirm -->
+    <div class="cf_container">
+        <div class="cf_desc1">Lễ Thành Hôn</div>
+        <div class="cf_desc2">Thứ Tư | 11h00</div>
+        <div class="cf_desc3">29.04.2025</div>
+        <div class="cf_desc4">(Tức Ngày 2 Tháng 4 Năm Ất Tỵ)</div>
+        <button class="cf_btn">
+            <a href="#">Xác nhận tham dự</a>
+        </button>
+        <button class="cf_btn">
+            <a href="#">Gửi quà mừng</a>
+        </button>
+    </div>
+    <!-- xác nhận tham dự -->
+    <!-- album -->
+    <div class="album_header">
+        <span>Album hình cưới</span>
+        <div class="line"></div>
+    </div>
+    <div class="album_container">
+        <img src="./source/anh2.jpg" alt="">
+        <img src="./source/dau.jpg" alt="">
+        <img src="./source/re.jpg" alt="">
+        <img src="./source/anh2.jpg" alt="">
+        <img src="./source/dau.jpg" alt="">
+        <img src="./source/re.jpg" alt="">
+        <img src="./source/anh2.jpg" alt="">
+        <img src="./source/dau.jpg" alt="">
+        <img src="./source/re.jpg" alt="">
+    </div>
+      
+</body>
+</html>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('.thiep_item');
+    const container = document.querySelector('.thiep_date_box');
+    if (items.length === 2 && container) {
+      const left = items[0].getBoundingClientRect().left;
+      const right = items[1].getBoundingClientRect().right;
+      const containerLeft = container.getBoundingClientRect().left;
+      const width = right - left;
+
+      const hr = document.querySelector('.hr-wrapper');
+      hr.style.width = width + 'px';
+      hr.style.left = (left - containerLeft) + 'px';
+      hr.style.transform = 'none';
+
+      const hr_add = document.querySelector('.hr-add');
+      hr_add.style.width = width + 'px';
+      hr_add.style.left = (left - containerLeft) + 'px';
+      hr_add.style.transform = 'none';
+      }
+    });
+</script>
+  

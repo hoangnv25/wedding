@@ -1,0 +1,253 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thiep {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(./source/anh2.jpg);
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thiep_blur-bg {
+    position: relative;
+    width: 92%;
+    margin: 4%;
+    border-radius: 20px;
+    background: #66666645;
+    backdrop-filter: blur(3px);
+    color: white;
+    text-align: center;
+}
+
+.thiep_container {
+    /* width: 92%;
+    height: 80%; */
+    padding: 4%;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+
+}
+
+.thiep_des {
+    margin: 12px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.thiep_name {
+    margin: 36px 0;
+    font-size: 36px;
+}
+
+.thiep_name > p {
+    text-transform: uppercase;
+    
+}
+
+.thiep_small {
+    font-size: 20px;
+
+}
+
+/* Phần 2 */
+.thiep_date_box {
+    margin-top: 36px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.hr-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: white;
+    width: 200px;
+}
+
+.thiep_space {
+    height: 32px;
+}
+
+.thiep_date_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.thiep_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    width: max-content;
+}
+
+.thiep_item hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid white;
+    margin: 2px 0;
+}
+
+.thiep_item span {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+
+.padding_day {
+    padding: 0 12px;
+}
+
+.padding_hour {
+    padding: 0 12px;
+}
+
+.thiep_main_date {
+    font-size: 48px;
+    font-weight: bold;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+.thiep_month_year {
+    margin-top: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* phần 3 */
+.thiep_add {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.add_fancy {
+    font-size: 20px;
+}
+
+.add_big {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+.add_small {
+    font-size: 12px;
+}
+
+
+.hr-add {
+    margin-top: 12px;
+    height: 1px;
+    background-color: white;
+    width: 200px; /* giống hr-wrapper */
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+.thiep_all_icon {
+    display: block;
+    margin: 16px 0;
+}
+
+.thiep_map {
+    display: block; /* Đảm bảo ảnh nền hiển thị */
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 12px;
+    margin: 0 auto;
+}
+
+.thiep_map:hover {
+    border: 1px solid rgb(125, 125, 125);
+}
+
+.thiep_map > img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Giới thiệu */
+.gt_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.gt_des, .gt_des2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.gt_img {
+    position: relative;
+    width: 90%;
+    aspect-ratio: 1 / 1; /* cắt vuông */
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.gt_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px black;
+    z-index: 1;
+}
