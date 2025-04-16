@@ -29,18 +29,49 @@
     width: 36%;
     border-radius: 18px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* animation: flash-shadow-img 2s infinite; */
     z-index: 2;
+
+    transition: all 2s ease-in-out;
+
 }
 
 .img_small {
     height: auto;
     width: 28%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* animation: flash-shadow-img 2s infinite; */
     transform: scale(1);
     opacity: 1;
     border-radius: 14px;
     z-index: 1;
 
+    transition: all 2s ease-in-out;
+}
+
+@keyframes flash-shadow-img {
+    0%, 100% 
+    {
+        box-shadow: 0 0 5px rgba(157, 157, 157, 0.534);
+    }
+    50% 
+    {
+        box-shadow: 0 0 7px rgba(60, 60, 60, 0.556);
+    }
+}
+
+.js_left {
+    opacity: 0;
+    transform: translateX(-80px);
+}
+
+.js_center {
+    transform: scale(1.5);
+}
+
+.js_right {
+    opacity: 0;
+    transform: translateX(80px);
 }
 
 
@@ -50,8 +81,22 @@
     text-align: center;
     width: 80%;
     border-radius: 16px;
-    
     margin-bottom: 150px;
+}
+
+@keyframes flash-shadow {
+    0%, 100% 
+    {
+        box-shadow: 0 0 12px rgba(157, 157, 157, 0.8);
+    }
+    50% 
+    {
+        box-shadow: 0 0 15px rgb(60, 60, 60);
+    }
+}
+
+.nhay-shadow {
+animation: flash-shadow 2s infinite;
 }
 
 .cf_container > div {

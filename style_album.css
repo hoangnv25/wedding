@@ -42,3 +42,37 @@
     transform: translateX(100px);
     opacity: 0;
 }
+
+.thank_container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./source/anh2.jpg);
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.thank_desc > img {
+    height: 50px;
+    margin-top: 12px;
+}
+
+.thank_desc {
+    line-height: 30px;
+    padding-bottom: 24px;
+    background-color: rgba(236, 236, 236, 0.322);
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
