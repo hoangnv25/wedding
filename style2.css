@@ -1,5 +1,5 @@
 .moi_container {
-    margin-top: 40px;
+    margin-top: 32px;
 }
 
 .moi_desc1 {
@@ -84,6 +84,19 @@
     margin-bottom: 150px;
 }
 
+.cf_container {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 4.2s ease;
+
+}
+
+.cf_container.show {
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @keyframes flash-shadow {
     0%, 100% 
     {
@@ -99,8 +112,10 @@
 animation: flash-shadow 2s infinite;
 }
 
+
+
 .cf_container > div {
-    margin: 6px 0;
+    margin-top: 6px;
 }
 
 .cf_desc1 {
@@ -139,7 +154,7 @@ animation: flash-shadow 2s infinite;
     box-shadow: 0 5px 6px 2px rgba(120, 120, 120, 0.4);
     background-color: #f1f1f1;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 14px;
 }
 
 .cf_btn:hover {
@@ -153,6 +168,20 @@ animation: flash-shadow 2s infinite;
     color: black;
 }
 
-.cf_btn2 {
+.cf_icon {
+    display: block;
+    margin-top: 18px !important;
+}
 
+.cf_map {
+    display: block; /* Đảm bảo ảnh nền hiển thị */
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid #909090;
+    border-radius: 50%;
+    padding: 14px;
+    margin: 0 auto;
 }

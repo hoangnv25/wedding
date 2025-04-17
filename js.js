@@ -1,3 +1,23 @@
+// ani 2 ảnh
+window.addEventListener('DOMContentLoaded', () => {
+    const imgs = document.querySelectorAll('.gt_img');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+
+    imgs.forEach(img => observer.observe(img));
+});
+
+
+
+
 // 3 ảnh
 window.addEventListener('scroll', () => 
 {
@@ -32,8 +52,29 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// cf nha
+document.addEventListener('DOMContentLoaded', () => {
+    const cfContainer = document.querySelector('.cf_container');
+
+    if (cfContainer) {
+        const observer2 = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        observer2.observe(cfContainer);
+    }
+});
 
 
+
+
+// ani album
 window.addEventListener('scroll', () => 
 {
     document.querySelectorAll('.js_album').forEach(el => 
@@ -51,4 +92,21 @@ window.addEventListener('scroll', () =>
         //     el.classList.add('album_right');
         // }
     });
+});
+
+// thank
+document.addEventListener('DOMContentLoaded', () => {
+    const thankDesc = document.querySelector('.thank_desc');
+
+    if (thankDesc) {
+        const observer3 = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer3.observe(thankDesc);
+    }
 });

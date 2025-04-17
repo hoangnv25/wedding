@@ -21,7 +21,6 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    background-image: url(./source/anh2.jpg);
     background-blend-mode: darken;
     background-color: rgba(0, 0, 0, 0.1);
     background-repeat: no-repeat;
@@ -32,26 +31,50 @@ body {
     justify-content: center;
 }
 
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.thiep::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(./source/anh2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: zoomInOut 10s ease-in-out infinite;
+    z-index: 0;
+    transform-origin: center;
+}
+
 .thiep_blur-bg {
     position: relative;
     width: 92%;
     margin: 4%;
     border-radius: 20px;
-    background: #66666645;
+    background: #7d7d7d45;
     backdrop-filter: blur(3px);
     color: white;
     text-align: center;
+    z-index: 1;
 }
 
 .thiep_container {
-    /* width: 92%;
-    height: 80%; */
     padding: 4%;
     position: relative;
     z-index: 1;
     color: white;
     text-align: center;
-
+    text-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
 .thiep_des {
@@ -212,16 +235,25 @@ body {
 
 /* Giới thiệu */
 .gt_container {
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
 }
 
-.gt_des, .gt_des2 {
+.gt_des {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.gt_des2 {
+    text-transform: uppercase;
+    font-weight: 500 !important;
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 24px;
+    
 }
 
 .gt_img {
@@ -230,6 +262,7 @@ body {
     aspect-ratio: 1 / 1; /* cắt vuông */
     overflow: hidden;
     border-radius: 20px;
+    margin-bottom: 18px;
 }
 
 .gt_img img {
@@ -251,3 +284,28 @@ body {
     text-shadow: 1px 1px 4px black;
     z-index: 1;
 }
+
+
+/* ani 2 ảnh */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gt_img {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.6s ease-out, transform 1.6s ease-out;
+    will-change: transform, opacity;
+}
+
+.gt_img.show {
+    animation: fadeInUp 1.8s ease forwards;
+}
+
