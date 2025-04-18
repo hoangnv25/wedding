@@ -110,3 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
         observer3.observe(thankDesc);
     }
 });
+
+
+// nhạc
+window.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('myAudio');
+    audio.play().catch(() => {
+        document.body.addEventListener('click', () => {
+            audio.play();
+        }, { once: true });
+    });
+});
+  

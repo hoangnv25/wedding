@@ -21,8 +21,6 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -47,7 +45,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(./source/anh2.jpg);
+    background-image: url(./Source_off/img/3_anh/thiep.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -252,7 +250,7 @@ body {
     font-weight: 500 !important;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     
 }
 
