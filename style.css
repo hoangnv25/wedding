@@ -33,6 +33,22 @@
     "wdth" 100;
 }
 
+#audioIndicator {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+    background-color: rgb(253, 250, 242);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  #audioIndicator > img {
+    display: block;
+  }
+
 /* HTML................................................................. */
 
 html {
@@ -111,7 +127,6 @@ body {
 }
 
 .thiep_container {
-    padding: 4%;
     position: relative;
     z-index: 1;
     color: white;
@@ -120,8 +135,8 @@ body {
 }
 
 .thiep_des {
-    margin: 12px;
-    margin-bottom: 20px;
+    margin: 18px;
+    margin-bottom: 24px;
     font-size: 30px;
     color: #ffffff;
     opacity: 0.9;
@@ -139,7 +154,6 @@ body {
 
 .thiep_small {
     font-size: 20px;
-
 }
 
 /* Phần 2....................................................... */
@@ -221,7 +235,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 18px;
 }
 
 .add_fancy {
@@ -229,17 +243,18 @@ body {
 }
 
 .add_big {
-    margin: 4px 0;
+    margin: 8px 0;
     font-size: 16px;
 }
 
 .add_small {
     font-size: 12px;
+    line-height: 18px;
 }
 
 
 .hr-add {
-    margin-top: 12px;
+    margin-top: 18px;
     height: 1px;
     background-color: white;
     width: 200px; /* giống hr-wrapper */

@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Ngọc Lan & Nguyễn Tiến</title>
-    <link rel="stylesheet" href="./style.css?v=19.1">
-    <link rel="stylesheet" href="./style2.css?v=19.1">
-    <script src="js.js?v=19.1"></script>
+    <link rel="stylesheet" href="./style.css?v=19.5">
+    <link rel="stylesheet" href="./style2.css?v=19.5">
+    <script src="js.js?v=19.5"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,17 +20,27 @@
     <link rel="icon" href="source/favicon.png" type="image/png">
 
 
+    <link rel="preload" as="image" href="./source/doc/back_thiep.svg" />
+    <link rel="preload" as="audio" href="./source/music.mp3" type="audio/mpeg" />
+    <link rel="preload" as="image" href="./source/doc/cam_anh.svg" />
+    <link rel="preload" as="image" href="./source/doc/xanh_chi.svg" />
+
 
 </head>
+
 
 <audio id="myAudio" autoplay>
     <source src="./source/music.mp3" type="audio/mpeg">
     Trình duyệt của bạn không hỗ trợ audio.
 </audio>
-  
 
-  
+
+
 <body>      
+    <div id="audioIndicator">
+        <img src="./source/volume.svg" alt="">
+        
+    </div>
     <!-- thiệp -->
     <div class="thiep">
         <div class="thiep_blur-bg">
@@ -134,12 +144,6 @@
         <button class="cf_btn js_qr font_tnr">
             Gửi quà mừng
         </button>
-        
-        <div class="cf_icon">
-            <a class="cf_map" href="https://maps.app.goo.gl/xfMHyt22JnTG3dLf8">
-                <img src="./source/pin_map_black.svg" alt="">
-            </a>
-        </div>
     </div>
     
     <!-- pop-up -->

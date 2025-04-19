@@ -111,17 +111,38 @@ document.addEventListener('DOMContentLoaded', () => {
 // nhạc
 window.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('myAudio');
+    const indicator = document.getElementById('audioIndicator');
   
     const playAudio = () => {
-      audio.play();
-      window.removeEventListener('scroll', playAudio);
-      document.body.removeEventListener('click', playAudio);
+      if (!audio.paused) return;
+  
+      audio.play()
+        .then(() => {
+          console.log('Phát nhạc thành công');
+          indicator.style.display = 'none'; // ẩn cái loa
+          removeListeners();
+        })
+        .catch((err) => {
+          console.warn('Trình duyệt chặn phát nhạc:', err);
+          // Vẫn giữ loa lại để chờ thao tác khác
+        });
     };
   
-    window.addEventListener('scroll', playAudio, { once: true });
-    document.body.addEventListener('click', playAudio, { once: true });
-
-});
+    const removeListeners = () => {
+      ['click', 'scroll', 'touchstart', 'mousemove', 'keydown'].forEach(evt => {
+        window.removeEventListener(evt, playAudio);
+        document.removeEventListener(evt, playAudio);
+      });
+    };
+  
+    // Gán tất cả sự kiện tương tác
+    ['click', 'scroll', 'touchstart', 'mousemove', 'keydown'].forEach(evt => {
+      window.addEventListener(evt, playAudio);
+      document.addEventListener(evt, playAudio);
+    });
+  });
+  
+  
 
 
 
