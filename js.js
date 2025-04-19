@@ -30,13 +30,6 @@ window.addEventListener('scroll', () =>
             el.classList.remove('js_left');
             el.classList.remove('js_right');
         }
-        else
-        {
-            if(el.classList.contains('js_l'))
-            el.classList.add('js_left');
-            else
-            el.classList.add('js_right');
-        }
     });
 });
 
@@ -46,11 +39,14 @@ window.addEventListener('scroll', () => {
         const rect = el.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom > 0) {
             el.classList.remove('js_center');
-        } else {
-            el.classList.add('js_center');
         }
     }
 });
+
+// lời mời
+
+
+
 
 // cf nha
 document.addEventListener('DOMContentLoaded', () => {
@@ -115,10 +111,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // nhạc
 window.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('myAudio');
-    audio.play().catch(() => {
-        document.body.addEventListener('click', () => {
-            audio.play();
-        }, { once: true });
-    });
+  
+    const playAudio = () => {
+      audio.play();
+      window.removeEventListener('scroll', playAudio);
+      document.body.removeEventListener('click', playAudio);
+    };
+  
+    window.addEventListener('scroll', playAudio, { once: true });
+    document.body.addEventListener('click', playAudio, { once: true });
+
 });
+
+
+
+
   

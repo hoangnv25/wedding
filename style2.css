@@ -1,5 +1,6 @@
 .moi_container {
     margin-top: 32px;
+    color: #001508;
 }
 
 .moi_desc1 {
@@ -21,14 +22,11 @@
     gap: 2%;
 }
 
-.moi_img > img {
-}
-
 .img_big {
     height: auto;
     width: 36%;
     border-radius: 18px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
     /* animation: flash-shadow-img 2s infinite; */
     z-index: 2;
 
@@ -39,7 +37,7 @@
 .img_small {
     height: auto;
     width: 28%;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
     /* animation: flash-shadow-img 2s infinite; */
     transform: scale(1);
     opacity: 1;
@@ -74,20 +72,34 @@
     transform: translateX(80px);
 }
 
+.moi_desc3 {
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 14px;
+    width: 80%;
+    margin: 0 auto;
+}
 
+
+
+/* comfirm.......................................................................................... */
 .cf_container {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+    box-shadow: 0 5px 20px rgba(225, 237, 235, 0.648);
     padding: 20px;
     text-align: center;
     width: 80%;
     border-radius: 16px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+
+    background-color: rgb(242, 251, 251);
 }
 
 .cf_container {
     opacity: 0;
     transform: translateY(60px);
     transition: all 4.2s ease;
+    color: #001508;
 
 }
 
@@ -100,11 +112,11 @@
 @keyframes flash-shadow {
     0%, 100% 
     {
-        box-shadow: 0 0 12px rgba(157, 157, 157, 0.8);
+        box-shadow: 0 0 12px rgb(208, 211, 211);
     }
     50% 
     {
-        box-shadow: 0 0 15px rgb(60, 60, 60);
+        box-shadow: 0 0 15px rgb(179, 190, 188);
     }
 }
 
@@ -141,7 +153,7 @@ animation: flash-shadow 2s infinite;
     color: #333;
     font-size: 14px;
     font-style: italic;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 .cf_btn {
@@ -151,14 +163,14 @@ animation: flash-shadow 2s infinite;
     width: 60%;
     margin: 5px 0;
     cursor: pointer;
-    box-shadow: 0 5px 6px 2px rgba(120, 120, 120, 0.4);
-    background-color: #f1f1f1;
+    box-shadow: 0 5px 6px 2px rgba(174, 174, 174, 0.4);
+    background-color: #e0edec;
     font-size: 14px;
     line-height: 14px;
 }
 
 .cf_btn:hover {
-    background-color: #eee;
+    background-color: #ccd4d3;
     box-shadow: 0 5px 6px 0 rgba(120, 120, 120, 0.4);
     font-size: 13.8px;
 }
@@ -170,7 +182,7 @@ animation: flash-shadow 2s infinite;
 
 .cf_icon {
     display: block;
-    margin-top: 18px !important;
+    margin-top: 12px !important;
 }
 
 .cf_map {
@@ -185,3 +197,215 @@ animation: flash-shadow 2s infinite;
     padding: 14px;
     margin: 0 auto;
 }
+
+/* pop_up........................... */
+.popup {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 3;
+    background-color: #55555570;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+}
+
+.popup.show {
+    display: flex;
+}
+
+.popup_container {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    padding: 0 50px;
+    scroll-padding: 50px;
+    border-radius: 8px;
+    /* gap: 12px; */
+
+    /* background-color: #858585; */
+    scroll-behavior: smooth;
+
+}
+
+.popup_item {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    /* max-width: 85%; */
+    position: relative;
+    
+    /* background-color: black; */
+}
+
+.popup_item {
+    opacity: 0.8;
+    transform: scale(0.8);
+    transition: opacity 0.2s linear, transform 0.2s linear;
+  }
+  
+
+
+.popup_item > img {
+    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (min-width: 440px) {
+    .popup_container {
+        width: 100%;
+        padding: 0 80px;
+        scroll-padding: 80px;
+        border-radius: 8px;
+        /* gap: 12px; */
+    }
+}
+  
+
+/* transform: translateX(60px) */
+/* transform: translateX(-60px) */
+
+.copy {
+    position: absolute;
+    top: 23%;
+    left: 63%;
+    width: 8%;
+    height: 6%;
+    /* background-color: rgba(255, 0, 0, 0.312); */
+    z-index: 4; /* đảm bảo nổi lên trên */
+    cursor: pointer;
+}
+
+#copy-toast {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #copy-toast.show {
+    opacity: 1;
+  }
+
+
+.hide-horizontal-scrollbar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE, Edge cũ */
+  }
+  
+  .hide-horizontal-scrollbar::-webkit-scrollbar {
+    height: 0px; /* Chrome, Safari */
+  }
+
+/* album....................................................................................... */
+
+.album_header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.album_header span {
+    font-family: 'Alex Brush', cursive;
+    font-size: 24px;
+    color: #555;
+    white-space: nowrap;
+    margin-left: 8px;
+}
+
+.line {
+    flex: 1;
+    height: 1.5px;
+    background-color: #858585;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.album_container {
+    column-count: 2;
+    column-gap: 1.5%; /* Khoảng cách giữa 2 cột */
+    padding: 8px;
+}
+
+.album_container > img {
+    width: 100%;
+    display: block;
+    margin-bottom: 3%;
+    transition: all 2s ease-in-out;
+}
+
+.album_left {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.album_right {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+/* thank................................................................................... */
+
+.thank_container {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./source/doc/cam_dep.svg);
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.thank_desc > img {
+    height: 50px;
+    margin-top: 12px;
+}
+
+.thank_desc {
+    line-height: 30px;
+    padding-bottom: 24px;
+    background-color: rgba(236, 236, 236, 0.322);
+    backdrop-filter: blur(4px);
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+    font-family: "Alex Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.thank_desc {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1.2s ease-in-out;
+}
+
+.thank_desc.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+  

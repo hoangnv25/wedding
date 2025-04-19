@@ -1,5 +1,49 @@
+.font_fancy{
+    font-family: "Alex Brush", cursive;
+    font-weight: 500;
+    font-style: normal;
+    /* font-size: 36px; */
+}
+
+
+.font_newsreader {
+    font-family: "Newsreader", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font_tnr {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.font_montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font_thanh_dam {
+    font-family: "Noto Serif Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+}
+
+/* HTML................................................................. */
+
 html {
     scroll-behavior: smooth;
+    background-color:aliceblue;
+
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    /* scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 0px; */
 }
 
 * {
@@ -45,7 +89,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url(./Source_off/img/3_anh/thiep.svg);
+    background-image: url(./source/doc/back_thiep.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -98,7 +142,7 @@ body {
 
 }
 
-/* Phần 2 */
+/* Phần 2....................................................... */
 .thiep_date_box {
     margin-top: 36px;
     position: relative;
@@ -251,6 +295,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 16px;
+    color: rgb(113, 47, 0);
     
 }
 
@@ -284,7 +329,7 @@ body {
 }
 
 
-/* ani 2 ảnh */
+/* ani 2 ảnh.................................................................... */
 @keyframes fadeInUp {
     from {
         opacity: 0;
