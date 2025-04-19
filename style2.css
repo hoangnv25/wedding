@@ -1,6 +1,6 @@
 .moi_container {
     margin-top: 32px;
-    color: #001508;
+    color: #00240e;
 }
 
 .moi_desc1 {
@@ -74,12 +74,14 @@
 }
 
 .moi_desc3 {
+    color: #725627;
     text-align: justify;
     text-indent: 30px;
     font-size: 14px;
     width: 80%;
-    margin: 18px auto;
+    margin: 24px auto;
     font-style: italic;
+    line-height: 18px;
 }
 
 
