@@ -376,19 +376,22 @@ animation: flash-shadow 2s infinite;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
     
 }
 
 .thank_desc > img {
     height: 50px;
     margin-top: 12px;
+    
 }
 
 .thank_desc {
     line-height: 30px;
     padding-bottom: 24px;
     background-color: rgba(236, 236, 236, 0.322);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     width: 100%;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -398,6 +401,7 @@ animation: flash-shadow 2s infinite;
     font-style: normal;
     font-size: 30px;
     text-shadow: 0 0 20px rgb(0, 0, 0);
+
 }
 
 .thank_desc {
@@ -412,4 +416,14 @@ animation: flash-shadow 2s infinite;
 }
 
 
-  
+.footter {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    color: #5555557a;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+}
